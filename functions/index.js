@@ -20,8 +20,16 @@ app.get('/timestamp',(request,response) => {
     response.send(`${Date.now()}`);
 });
 
-app.get('/userx',(request,response) => {
-    response.render('userx', { title: 'Express' });
+app.get('/home',(request,response) => {
+    response.render('home');
+});
+
+app.get('/thingstodo',(request,response) => {
+    response.render('thingstodo');
+});
+
+app.get('/contact',(request,response) => {
+    response.render('contact');
 });
 
 exports.app = functions.https.onRequest(app);

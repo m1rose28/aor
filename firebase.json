@@ -13,7 +13,15 @@
         "function": "app"
       },
       {
-        "source": "/userx",
+        "source": "/home",
+        "function": "app"
+      },
+      {
+        "source": "/contact",
+        "function": "app"
+      },
+      {
+        "source": "/thingstodo",
         "function": "app"
       }]
   }
