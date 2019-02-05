@@ -20,10 +20,6 @@ app.get('/timestamp',(request,response) => {
     response.send(`${Date.now()}`);
 });
 
-app.get('/home',(request,response) => {
-    response.render('home');
-});
-
 app.get('/thingstodo',(request,response) => {
     response.render('thingstodo');
 });

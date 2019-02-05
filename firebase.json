@@ -6,14 +6,14 @@
     "source": "functions"
   },
   "hosting": {
-    "public": "public",
+    "public": "public",    
     "rewrites": [
       {
         "source": "/timestamp",
         "function": "app"
       },
       {
-        "source": "/home",
+        "source": "/",
         "function": "app"
       },
       {
