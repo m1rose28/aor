@@ -18,10 +18,8 @@
     // doc.data() is never undefined for query doc snapshots
     c++;
     quote[c]=doc.data();
-    console.log(doc.id, " => ",quote[c]);
     });
     
-    console.log("count:"+c);
     var r=Math.round(Math.random() * (c - 1) + 1);
     
     var quotelist=document.getElementById("quotelist");
