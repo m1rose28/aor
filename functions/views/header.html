@@ -19,6 +19,20 @@
 <link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
 
 
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAt3KSKnugZZ1xQiZqvzDZXIS0ztTVdwh8",
+    authDomain: "aptosoceanrose.firebaseapp.com",
+    databaseURL: "https://aptosoceanrose.firebaseio.com",
+    projectId: "aptosoceanrose",
+    storageBucket: "aptosoceanrose.appspot.com",
+    messagingSenderId: "731616952019"
+  };
+  firebase.initializeApp(config);
+  var db = firebase.firestore();
+  </script>
        
 </head>
     <body>   

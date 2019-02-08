@@ -1,22 +1,37 @@
 <div class="rightnav">
 
-    <div class="rightnavheader">Book a Stay</div>   
-    <div class="rightnavtext">
-        Our house rents out quickly. Reserve your spot soon!
-        <br><br>
-        <span class="b1"><a href="/contact" class="b2">Book a Stay ></a></span>
-        </div>
-
-    <div class="rightnavheader">Things To Do</div>   
-    <div class="rightnavtext">
-        You are going to absolutely fall in love with Aptos! It is one of the most beautiful, adventurous, culture-rich locations along the breathtaking California coast. We've compiled a list of all the amazing things you and your family can do together during your stay.
-    <br><br>
-    <span class="b1"><a href="/thingstodo" class="b2">View ></a></span>
-    <br>
-    </div>
+    <div class="rightnavheader">Testimonials</div>   
+    <div id="quotelist" class="rightnavtext">
+   </div>
 
     <div class="rightnavheader">Friends</div>   
 		<div style="margin:5px; padding-top:10px;padding-bottom:10px;background-color:#FFF;">
 		<div class="fb-like" data-href="http://www.aptosoceanrose.com" data-colorscheme="light" data-width="260" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 		</div>
-</div>   
+</div>
+
+<script>
+  var quote=[];
+  var c=0;
+  db.collection("quotes").get().then(function(querySnapshot) {
+    querySnapshot.forEach(function(doc) {
+    // doc.data() is never undefined for query doc snapshots
+    c++;
+    quote[c]=doc.data();
+    console.log(doc.id, " => ",quote[c]);
+    });
+    
+    console.log("count:"+c);
+    var r=Math.round(Math.random() * (c - 1) + 1);
+    
+    var quotelist=document.getElementById("quotelist");
+    var cquote=document.createElement("div");
+    var cname=document.createElement("div");
+    cquote.innerHTML=quote[r].quote;
+    cname.innerHTML="<br><br> - "+quote[r].name;
+    quotelist.appendChild(cquote);
+    quotelist.appendChild(cname);
+   });
+
+
+  </script>   
